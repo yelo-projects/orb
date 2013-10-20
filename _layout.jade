@@ -1,0 +1,9 @@
+!!!
+html(lang="en")
+	head
+		title=public.data.title
+		link(rel="stylesheet", href="/main.css")
+		script(src="http://code.jquery.com/jquery-1.10.1.min.js")
+	body
+		!= yield
+		include main.js

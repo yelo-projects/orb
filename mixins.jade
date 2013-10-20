@@ -1,0 +1,77 @@
+//- *****************************************
+//-				MIXINS
+//- ****************************************
+
+mixin sectionImage(image,c)
+	.image(class=c)
+		+placeholder(image.alt,image.url,image.type,image.size)
+
+mixin sectionPerson(image)
+	.image.size-1.image-person
+		+placeholder("photo of "+image.name,"people/"+image.url,"person",1)
+		span.image-person-caption.image-person-caption-name=image.name
+		span.image-person-caption.image-person-caption-title=image.title
+
+mixin sectionInfo(section,c)
+	- var id = section.slug
+	.info(class=c, id="Info-"+id)
+		if section.title
+			h3=section.title
+		for paragraph in section.paragraphs
+			- var type = paragraph.constructor;
+			case type
+				when String
+					+paragraph(paragraph)
+				when Array
+					+list(paragraph)
+				when Object
+					for url,network in paragraph
+						a.social-link(href="http://www."+network+".com/"+url,target="_blank",title="meet us on "+network)=network
+				default
+					p
+
+mixin section(section)
+	- var c = (section.size ? "size-"+section.size : "") + (section.height? " height-"+section.height:"");
+	case section.type
+		when "info"
+			+sectionInfo(section,c)
+		when "image"
+			+sectionImage(section,c)
+		when "person"
+			+sectionPerson(section,c)
+		default
+			p
+
+mixin placeholder(alt,url,type,size)
+	- var width, height;
+	- if(type=="person"){
+	-	width = 310; height = 310
+	- }else{
+	- var size_1 = 310;
+	- var size_2 = 630;
+	- var size_3 = 950;
+	- var size_half = 470;
+	- var width = (size=="half") ?  size_half : (size==1) ? size_1 : (size==2) ? size_2 : size_3;
+	- var height = (width * 0.6) - 5;
+	- }
+	- if(!url){url="http://placehold.it/"+width+"x"+height+"&text="+alt;}
+	- else{url="http://lorempixel.com/"+width+"/"+height+"/"+url+"/"+(Math.floor(Math.random() * 10)+1);}
+	img(src=url,width=width,height="auto",alt=alt,class=attributes.class)
+
+mixin paragraph(p)
+	p!=p
+
+mixin list(l)
+	ul
+		for item in l
+			li=item
+
+mixin img(url,alt,width,height)
+	- width = width || "auto";
+	- height = height || "auto";
+	img(src="/assets/"+url, alt=alt,width=width,height=height,class=attributes.class,id=attributes.id)
+
+mixin dbImg(url,alt,width,height)
+	- width = width || "auto";
+	- height = height || "auto";
+	img(src="https://dl.dropbox.com/s/"+url, alt=alt,width=width,height=height,class=attributes.class,id=attributes.id)

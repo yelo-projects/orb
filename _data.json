@@ -1,0 +1,188 @@
+{
+	"title":"Orb"
+,	"pages":[
+		{
+			"slug":"Who"
+		,	"title":"Who We Are"
+		,	"sections":[
+				{
+					"type":"info"
+				,	"size": 2
+				,	"height": 2
+				,	"slug":"About"
+				,	"title":"What we do"
+				,	"paragraphs":[
+						"Orb offers customers new and innovative mediums for advertising that have"
+					,	[
+							"Actual physical components"
+						,	"High brand visibility"
+						,	"Environmental awareness"
+						,	"Benefits the community as a whole"
+						]
+					]
+				}
+			,	{
+					"type":"info"
+				,	"size": 1
+				,	"height": 2
+				,	"slug":"Demographic"
+				,	"title":"The 18 to 25 Demographic at a Glance"
+				,	"paragraphs":[
+						"With the large expanse of downloadable and streamable online content, rarely do they listen to the radio or watch TV."
+					,	"This demographic is always on the go and are more likely to skim over, rather than read and engage in your online content."
+					,	"Studies have shown that they, and other demographics, tend to ignore the thousands of clickable online ads."
+					]
+				}
+			]
+		}
+	,	{
+			"slug":"Medium"
+		,	"title":"A New Medium"
+		,	"sections":[
+				{
+					"type":"image"
+				,	"size": 2
+				,	"height": 2
+				,	"url":""
+				,	"alt":"a photo of cups"
+				}
+			,	{
+					"type":"info"
+				,	"size": 1
+				,	"height": 1
+				,	"slug":"Explanation"
+				,	"paragraphs":[
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros risus"
+					]
+				}
+			,	{
+					"type":"image"
+				,	"size": 1
+				,	"height": 1
+				,	"url":""
+				,	"alt":"a photo of one cup"
+				}
+			,	{
+					"type":"image"
+				,	"size": 3
+				,	"height": 3
+				,	"url":""
+				,	"alt":"another photo of a cup"
+				}
+			]
+		}
+	,	{
+			"slug":"Locations"
+		,	"title":"Where"
+		,	"sections":[
+				{
+					"type":"info"
+				,	"size": "half"
+				,	"height": "half"
+				,	"slug":"Demographic"
+				,	"paragraphs":[
+						"implementing ad campaigns on coffee cups in three interconnected hotspots inside Beirut:"
+					,	[
+							"Hamra"
+						,	"Raouche"
+						,	"Gemmayzeh"
+						]
+					]
+				}
+			,	{
+					"type":"image"
+				,	"size": "half"
+				,	"height": "half"
+				,	"url":""
+				,	"alt":"shop selling hotdogs and handing cups"
+				}
+			,	{
+					"type":"image"
+				,	"size": 3
+				,	"height": 3
+				,	"url":""
+				,	"alt":"delivery guy with cups"
+				}
+			,	{
+					"type":"image"
+				,	"size": "half"
+				,	"height": "half"
+				,	"url":""
+				,	"alt":"graph showing coverage"
+				}
+			,	{
+					"type":"image"
+				,	"size": "half"
+				,	"height": "half"
+				,	"url":""
+				,	"alt":"someone holding a cup"
+				}
+			]
+		}
+	,	{
+			"slug":"Team"
+		,	"title":"Team"
+		,	"sections":[
+				{
+					"type":"person"
+				,	"url": "1"
+				,	"name":"Ala Matar"
+				,	"title":"Chief Executive Officer"
+				}
+			,	{
+					"type":"person"
+				,	"url": "2"
+				,	"name":"Ala Matar"
+				,	"title":"Chief Executive Officer"
+				}
+			,	{
+					"type":"person"
+				,	"url": "3"
+				,	"name":"Ala Matar"
+				,	"title":"Chief Executive Officer"
+				}
+			,	{
+					"type":"info"
+				,	"size": 3
+				,	"height": 2
+				,	"slug":"People"
+				,	"paragraphs":[
+						"Praesent mollis molestie diam tincidunt cursus. Curabitur mattis orci nulla, eget euismod elit ultrices id. Interdum et malesuada fames ac ante ipsum primis in faucibus"
+					]
+				}
+			]
+		}
+	,	{
+			"slug":"Contact"
+		,	"title":"Contact Us"
+		,	"sections":[
+				{
+					"type":"info"
+				,	"size": 1
+				,	"height": 2
+				,	"slug":"Reach"
+				,	"paragraphs":[
+						"If you think we can help you, we'd love to <a href=\"mailto:a@b.com\">hear from you</a>"
+					]
+				}
+			,	{
+					"type":"info"
+				,	"size": 2
+				,	"height": 2
+				,	"slug":"Address"
+				,	"paragraphs":[
+						"El Bouchrieh, Lebanon"
+					,	"Mar Takla Street"
+					,	"St Joseph Center, 6th Floor"
+					,	"+961 3 854 990"
+					,	{
+							"facebook":"orb"
+						,	"twitter":"orb"
+						,	"linkedin":"orb"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,25 @@
+include mixins
+
+#Pages
+
+	#Page-Title.page
+		#Wrapper-Logo.wrapper
+			#Logo
+
+	for page in public.data.pages
+		- var id = page.slug
+		.page(id="Page-"+id)
+			a(name=id,id=id,class="anchor")
+			if page.title
+				div(class="wrapper-title", id="Wrapper-Title-"+id)
+					h1(class="title", name=id, id="Title-"+id)=page.title
+			.wrapper(id="Wrapper-"+id)
+				for section in page.sections
+					+section(section)
+
+#Navigation.menu-container
+	.wrapper.wrapper-menu
+		.menu
+			for page in public.data.pages
+				unless page.skip
+					a.menu-link(href="#"+page.slug)=page.title
