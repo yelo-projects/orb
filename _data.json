@@ -4,6 +4,7 @@
 		{
 			"slug":"Who"
 		,	"title":"Who We Are"
+		,	"icon":"icon-book"
 		,	"sections":[
 				{
 					"type":"info"
@@ -38,6 +39,7 @@
 	,	{
 			"slug":"Medium"
 		,	"title":"A New Medium"
+		,	"icon":"icon-star"
 		,	"sections":[
 				{
 					"type":"image"
@@ -74,6 +76,7 @@
 	,	{
 			"slug":"Locations"
 		,	"title":"Where"
+		,	"icon":"icon-map-marker"
 		,	"sections":[
 				{
 					"type":"info"
@@ -122,6 +125,7 @@
 	,	{
 			"slug":"Team"
 		,	"title":"Team"
+		,	"icon":"icon-user"
 		,	"sections":[
 				{
 					"type":"person"
@@ -155,6 +159,7 @@
 	,	{
 			"slug":"Contact"
 		,	"title":"Contact Us"
+		,	"icon":"icon-pencil"
 		,	"sections":[
 				{
 					"type":"info"

@@ -7,3 +7,6 @@
 [submodule "js/stellar"]
 	path = js/stellar
 	url = git@github.com:markdalgleish/stellar.js.git
+[submodule "fontawesome"]
+	path = fontawesome
+	url = git@github.com:FortAwesome/Font-Awesome.git
