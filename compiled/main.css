@@ -7,7 +7,7 @@ table{border-collapse:separate;border-spacing:0;vertical-align:middle}
 caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
 a img{border:none}
 html,body{height:100%}
-body{font-family:'Muli',"Century Gothic",sans-serif;background:#f4f4f7;color:#444;margin:0;font-size:1.6em}
+body{font-family:'Muli',"Century Gothic",sans-serif;background:#f4f4f7;color:#444;margin:0;font-size:2.3em}
 h1,h2,h3,h4,h5{font-family:'Playfair Display',serif}
 h1{font-size:65px;line-height:1.2em;border-bottom:#ccc solid 1px;padding:20px 0;margin-bottom:40px}
 h3{font-weight:300;min-height:3.2em}
@@ -62,12 +62,13 @@ img[class^="size-"],img[class*=" size-"]{margin:0 auto}
 .social-link{font-size:2em;}
 .social-link span{display:none}
 .scrollDown{color:#fff;padding:10px;position:absolute;bottom:0;font-size:2em}
-#Menu-Revealer,.menu-container{position:absolute;position:fixed;display:block;width:50px;height:50px;right:0;top:0;line-height:2em;text-align:center}
+#Menu-Revealer,.menu-container{position:absolute;position:fixed;display:block;width:150px;height:150px;right:0;top:0;line-height:2em;text-align:center}
 .menu-container,.wrapper-menu,.menu,.menu-link{display:block}
-.wrapper-menu{width:300px;height:auto;float:right;top:50px;right:0;position:absolute;background:#000;display:none}
+.wrapper-menu{width:300px;height:auto;float:right;top:150px;right:0;position:absolute;background:#000;display:none}
 .menu-link{display:block;width:300px}
 #Home-Link{display:none}
-@media screen and (min-width:1400px){.size-2{width:630px}
+@media screen and (min-width:1400px){body{font-size:1.6em}
+.size-2{width:630px}
 .size-1{width:310px}
 .menu-container{width:100%}
 .wrapper-menu{display:table;height:100%;width:auto;float:none;top:auto;right:auto;position:relative;background:none}
