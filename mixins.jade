@@ -25,8 +25,12 @@ mixin sectionInfo(section,c)
 				when Array
 					+list(paragraph)
 				when Object
-					for url,network in paragraph
-						a.social-link(href="http://www."+network+".com/"+url,target="_blank",title="meet us on "+network)=network
+					.social-icons
+						for url,network in paragraph
+							a.social-link.icon-stack(href="http://www."+network+".com/"+url,target="_blank",title="meet us on "+network)
+								i.icon-check-empty.icon-stack-base
+								i(class="icon-"+network)
+								span=network
 				default
 					p
 
@@ -64,7 +68,9 @@ mixin paragraph(p)
 mixin list(l)
 	ul
 		for item in l
-			li=item
+			li
+				i.icon-li.icon-ok
+				=item
 
 mixin img(url,alt,width,height)
 	- width = width || "auto";

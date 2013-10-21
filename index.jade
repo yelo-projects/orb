@@ -2,14 +2,13 @@ include mixins
 
 #Pages
 
-	#Page-Title.page
+	#Home.page(data-id="Home")
 		#Wrapper-Logo.wrapper
 			#Logo
 
 	for page in public.data.pages
 		- var id = page.slug
-		.page(id="Page-"+id)
-			a(name=id,id=id,class="anchor")
+		.page(id=id,data-id=id)
 			if page.title
 				div(class="wrapper-title", id="Wrapper-Title-"+id)
 					h1(class="title", name=id, id="Title-"+id)=page.title
@@ -20,6 +19,11 @@ include mixins
 #Navigation.menu-container
 	.wrapper.wrapper-menu
 		.menu
+			a#Home-Link.menu-link(href="#Home")
+				i.icon-fixed-width.icon-home
 			for page in public.data.pages
 				unless page.skip
-					a.menu-link(href="#"+page.slug)=page.title
+					a.menu-link(href="#"+page.slug,id=page.slug+"-Link")
+						if page.icon
+							i.icon-fixed-width(class=page.icon)
+						= page.title
