@@ -1,4 +1,4 @@
-@import "nib"
+@import "_nib"
 @import url("http://fonts.googleapis.com/css?family=Muli")
 @import url("http://fonts.googleapis.com/css?family=Playfair+Display|Fjalla+One|Oswald")
 pages = 5
@@ -99,7 +99,7 @@ li
 	width 100%
 	height 100%
 
-a
+.social-link
 	&:link,&:visited
 		color #000
 	&:hover,&:active
@@ -238,3 +238,10 @@ img[class^="size-"],img[class*=" size-"]
 	font-size 2em
 	span
 		display none
+
+.scrollDown
+	color #fff
+	padding 10px
+	position absolute
+	bottom 0
+	font-size 2em

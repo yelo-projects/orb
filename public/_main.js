@@ -41,7 +41,7 @@ function setPage(id){
 	$menuLinks.not($menuLink).removeClass('active');
 }
 
-$menuLinks.click(function(event){
+$menuLinks.add('a.scrollDown').click(function(event){
 	var hash = $(this).attr('href');
 	var $target = $(hash);
 	if(!$target.length){return false;}

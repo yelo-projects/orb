@@ -1,10 +1,12 @@
-include mixins
+include _mixins
 
 #Pages
 
 	#Home.page(data-id="Home")
 		#Wrapper-Logo.wrapper
 			#Logo
+			a.scrollDown(href="#"+public.data.pages[0].slug)
+				i.icon-angle-down
 
 	for page in public.data.pages
 		- var id = page.slug
