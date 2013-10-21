@@ -1,12 +1,6 @@
 [submodule "nib"]
 	path = nib
 	url = https://github.com/visionmedia/nib.git
-[submodule "js/jquery-waypoints"]
-	path = js/jquery-waypoints
-	url = git@github.com:imakewebthings/jquery-waypoints.git
-[submodule "js/stellar"]
-	path = js/stellar
-	url = git@github.com:markdalgleish/stellar.js.git
 [submodule "fontawesome"]
 	path = fontawesome
 	url = git@github.com:FortAwesome/Font-Awesome.git
