@@ -69,3 +69,7 @@ $window.scroll(function(){
     	}
     })
 });
+
+$('#Menu-Revealer').on('click',function(){
+	$('#Menu').toggle()
+})
