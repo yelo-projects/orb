@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><title>Orb</title><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"><link rel="stylesheet" href="/main.css"></head><body><p><a href="https://travis-ci.org/visionmedia/nib"><img src="https://travis-ci.org/visionmedia/nib.png?branch=master" alt="Build Status"></a></p>
+<h1>Nib</h1>
+<p>  Stylus mixins, utilities, components, and gradient image generation. Don&#39;t forget to check out the <a href="http://visionmedia.github.com/nib/">documentation</a>.</p>
+<h2>Installation</h2>
+<pre><code class="language-bash">$ npm install nib</code></pre>
+<p> If the image generation features of Nib are desired, such as generating the linear gradient images, install <a href="http://github.com/learnboost/node-canvas">node-canvas</a>:</p>
+<pre><code class="language-bash">$ npm install canvas</code></pre>
+<h2>JavaScript API</h2>
+<p> Below is an example of how to utilize nib and stylus with the connect framework (or express).</p>
+<pre><code class="language-javascript">var connect = require(&#39;connect&#39;)
+  , stylus = require(&#39;stylus&#39;)
+  , nib = require(&#39;nib&#39;);
+
+var server = connect();
+
+function compile(str, path) {
+  return stylus(str)
+    .set(&#39;filename&#39;, path)
+    .set(&#39;compress&#39;, true)
+    .use(nib());
+}
+
+server.use(stylus.middleware({
+    src: __dirname
+  , compile: compile
+}));</code></pre>
+<h2>Stylus API</h2>
+<p>  To gain access to everything nib has to offer, simply add:</p>
+<pre><code class="language-css">  @import &#39;nib&#39;</code></pre>
+<p>  Or you may also pick and choose based on the directory structure in <code>./lib</code>, for example:</p>
+<pre><code class="language-css">  @import &#39;nib/gradients&#39;
+  @import &#39;nib/overflow&#39;</code></pre>
+<p>to be continued....</p>
+<h2>More Information</h2>
+<ul>
+<li>Introduction <a href="http://www.screenr.com/M6a">screencast</a></li>
+</ul>
+<h2>Testing</h2>
+<p> You will first need to install the dependencies:</p>
+<pre><code class="language-bash">    $ npm install -d</code></pre>
+<p> Run the automated test cases:</p>
+<pre><code class="language-bash">    $ npm test</code></pre>
+<p> For visual testing run the test server:</p>
+<pre><code class="language-bash">    $ npm run-script test-server</code></pre>
+<p> Then visit <code>localhost:3000</code> in your browser.</p>
+<h2>Contributors</h2>
+<p>I would love more contributors. And if you have helped out, you are awesome! I want to give a huge thanks to these people:</p>
+<ul>
+<li><a href="https://github.com/visionmedia">TJ Holowaychuk</a> (Original Creator)</li>
+<li><a href="https://github.com/slang800">Sean Lang</a> (Current Maintainer)</li>
+<li><a href="https://github.com/superstructor">Isaac Johnston</a></li>
+<li><a href="https://github.com/visionmedia/nib/contributors">Everyone Else</a></li>
+</ul>
+<h2>License</h2>
+<p>(The MIT License)</p>
+<p>Copyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+&#39;Software&#39;), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &#39;AS IS&#39;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<script src="//code.jquery.com/jquery-1.10.1.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><script>var scrollElement = 'body', $scrollElement
+var $anchors = $('.page');
+var $window = $(window);
+var $menuLinks = $('a.menu-link')
+var resizeTimer;
+
+// determine scrolling element
+$('html, body').each(function(){
+	var $this = $(this);
+	var initScrollTop = $this.attr('scrollTop');
+	$this.attr('scrollTop', initScrollTop + 1);
+	if($this.attr('scrollTop') == initScrollTop + 1){
+		scrollElement = this.nodeName.toLowerCase();
+		$this.attr('scrollTop', initScrollTop);
+		return false;
+	}    
+});
+
+$scrollElement = $(scrollElement);
+
+function isScrolledIntoView($elem,offset,limit){
+
+	var docViewTop = $window.scrollTop();
+	var docViewBottom = docViewTop + $window.height();
+
+	var elemTop = $elem.offset().top;
+	if(offset===true){
+		var elemBottom = elemTop + $elem.height();
+	}
+	else{
+		elemBottom = elemTop + (offset ? offset : 2);
+	}
+
+	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop) && (elemTop <= docViewTop + (limit? limit : 100)));
+}
+
+function setPage(id){
+	var hash = '#'+id;
+	var $menuLink = $(hash+"-Link").addClass('active')
+	window.location.hash = hash;
+	$menuLinks.not($menuLink).removeClass('active');
+}
+
+$menuLinks.click(function(event){
+	var hash = $(this).attr('href');
+	var $target = $(hash);
+	if(!$target.length){return false;}
+	$scrollElement.stop().animate({scrollTop: $target.offset().top}, 500, 'swing', function() {window.location.hash = hash;})
+	event.preventDefault();
+})
+
+/* Force snap to panel on resize. */
+$window.resize(function() {
+	window.clearTimeout(resizeTimer);
+	resizeTimer = window.setTimeout(function() {
+		var hash = window.location.hash ? window.location.hash : '#Home';
+		$scrollElement.stop().animate({scrollTop: $(hash).offset().top}, 200);
+	}, 100);
+});
+
+$window.scroll(function(){
+    var x = $scrollElement.scrollTop();
+    var pos = parseInt(-x / 10);
+    $anchors.css('background-position', '0% ' +  pos + 'px').each(function(){
+    	var $page = $(this);
+    	if(isScrolledIntoView($page)){
+    		setPage(this.id,50);
+    		return false;
+    	}
+    })
+});</script></body></html>
