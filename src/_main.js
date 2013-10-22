@@ -46,7 +46,12 @@
 		var hash = '#'+id;
 		var $menuLink = $(hash+"-Link").addClass('active')
 		$menuLinks.not($menuLink).removeClass('active');
-		$scrollElement.stop().animate({scrollTop: $page.offset().top}, time || 0, 'swing', function() {window.location.hash = hash;})
+		var setHash = function() {window.location.hash = hash;};
+		if(time){
+			$scrollElement.stop().animate({scrollTop: $page.offset().top}, time, 'swing', setHash)
+		}else{
+			setHash
+		}
 	}
 
 	$menuLinks.add('a.scrollDown').click(function(event){
@@ -74,7 +79,7 @@
 		$pages.css('background-position', '0% ' +  pos + 'px').each(function(){
 			var $page = $(this);
 			if(isScrolledIntoView($page)){
-				setPage($page,this.id);
+				setPage($page,this.id,0);
 				return false;
 			}
 		})
