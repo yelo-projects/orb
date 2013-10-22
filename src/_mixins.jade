@@ -12,6 +12,12 @@ mixin sectionPerson(image)
 		span.image-person-caption.image-person-caption-name=image.name
 		span.image-person-caption.image-person-caption-title=image.title
 
+mixin sectionMap(map,c)
+	- var width = map.dimensions.width || 640;
+	- var height = map.dimensions.height || 480;
+	.iframe-wrapper(class=c,id="Map-"+map.slug)
+		iframe(src=map.url, width=width, height=height)
+
 mixin sectionInfo(section,c)
 	- var id = section.slug
 	.info(class=c, id="Info-"+id)
@@ -36,6 +42,8 @@ mixin sectionInfo(section,c)
 mixin section(section)
 	- var c = (section.size ? "size-"+section.size : "") + (section.height? " height-"+section.height:"");
 	case section.type
+		when "map"
+			+sectionMap(section,c)
 		when "info"
 			+sectionInfo(section,c)
 		when "image"
