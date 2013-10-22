@@ -73,7 +73,7 @@ transition: all 300ms ease-in-out;
 .menu-logo-wrapper{height:300px}
 #Menu-Revealer,.menu-container{position:absolute;position:fixed;display:block;width:150px;height:100%;right:0;top:0;text-align:center;background:#000}
 #Pages{position:relative}
-#Menu-Revealer{font-size:2em;line-height:1.5em;right:0;color:#ccc;background:#9c9c9c}
+#Menu-Revealer{font-size:2em;line-height:1.5em;right:0;color:#ccc;height:150px;background:#9c9c9c}
 .menu-container{font-size:1.5em}
 .menu-container,.wrapper-menu,.menu,.menu-link{display:block}
 .wrapper-menu{width:600px;height:100%;float:right;right:-600px;position:absolute;background:#000}
