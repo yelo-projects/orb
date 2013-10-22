@@ -10,7 +10,7 @@ include _mixins
 
 	for page in public.data.pages
 		- var id = page.slug
-		.page(id=id,data-id=id)
+		.page(id=id,data-id=id,class=(page.special? page.special:''))
 			if page.title
 				div(class="wrapper-title", id="Wrapper-Title-"+id)
 					h1(class="title", name=id, id="Title-"+id)=page.title
@@ -23,11 +23,11 @@ include _mixins
 		i.icon-ellipsis-vertical
 	#Menu.wrapper.wrapper-menu
 		.menu
-			a#Home-Link.menu-link(href="#Home")
+			a#Home-Link.menu-link.active(href="#Home")
 				i.icon-fixed-width.icon-home
 			for page in public.data.pages
 				unless page.skip
 					a.menu-link(href="#"+page.slug,id=page.slug+"-Link")
 						if page.icon
 							i.icon-fixed-width(class=page.icon)
-						= page.title
+						= page.menuTitle || page.title

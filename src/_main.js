@@ -1,5 +1,5 @@
 var scrollElement = 'body', $scrollElement
-var $anchors = $('.page');
+var $pages = $('.page');
 var $window = $(window);
 var $menuLinks = $('a.menu-link')
 var resizeTimer;
@@ -59,17 +59,17 @@ $window.resize(function() {
 });
 
 $window.scroll(function(){
-    var x = $scrollElement.scrollTop();
-    var pos = parseInt(-x / 10);
-    $anchors.css('background-position', '0% ' +  pos + 'px').each(function(){
-    	var $page = $(this);
-    	if(isScrolledIntoView($page)){
-    		setPage(this.id,50);
-    		return false;
-    	}
-    })
+	var x = $scrollElement.scrollTop();
+	var pos = parseInt(-x / 10);
+	$pages.css('background-position', '0% ' +  pos + 'px').each(function(){
+		var $page = $(this);
+		if(isScrolledIntoView($page)){
+			setPage(this.id,100);
+			return false;
+		}
+	})
 });
 
 $('#Menu-Revealer').on('click',function(){
-	$('#Menu').toggle()
+	$('#Menu').toggleClass('open')
 })

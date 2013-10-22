@@ -26,7 +26,6 @@ h1, h2, h3, h4, h5
 h1
 	font-size 65px
 	line-height 1.2em
-	border-bottom #CCC solid 1px
 	padding 20px 0
 	margin-bottom 40px
 
@@ -38,6 +37,18 @@ p
 	text-align justify
 	word-break keep-all
 	hyphens auto
+	a, a:link, a:visited, a:hover
+		color #6986F8
+
+
+strong
+	font-size 1.1em
+	font-weight bold
+	strong
+		font-size 1.2em
+
+em
+	color #6986F8
 
 li
 	text-indent .2em
@@ -86,7 +97,7 @@ li
 	position absolute
 	position fixed
 	top 0
-	background grey
+	background #000
 	height menuSize
 
 .menu-link
@@ -102,10 +113,12 @@ li
 		color #909090
 
 .social-link
+	background none
 	&:link,&:visited
 		color #000
 	&:hover,&:active
-		color #990000
+		color #fcfcfc
+		background black
 
 .anchor
 	position absolute
@@ -117,6 +130,12 @@ li
 .info
 	padding 20px
 	position relative
+	background #fcfcfc
+
+.image
+	text-align center
+	img
+		margin 0 auto
 
 .size-1, .size-2, .size-3, .size-half
 	width 950px
@@ -170,21 +189,20 @@ li
 		background-color #000
 		background-color rgba(0,0,0,.4)
 		text-align center
-		&.image-person-caption-name
-			bottom -10px
-			padding 10px 0 20px 0
-			background-color rgba(0,0,0,.6)
-		&.image-person-caption-title
-			font-size .8em
-			line-height 1.4em
-
+	.image-person-caption-name
+		bottom 45px
+		padding 10px 0 20px 0
+		background-color rgba(0,0,0,.6)
+	.image-person-caption-title
+		display none
+		font-size .8em
+		line-height 1.4em
 
 img[class^="size-"],img[class*=" size-"]
 	margin 0 auto
 
 [class^="size-"],[class*=" size-"]
 	float left
-	background #fcfcfc
 
 #Home, #Contact
 	height (100% / pages)
@@ -223,6 +241,11 @@ img[class^="size-"],img[class*=" size-"]
 	bottom 0
 	font-size 2em
 
+#Menu
+	display none
+	&.open
+		display block
+
 #Menu-Revealer, .menu-container
 	position absolute
 	position fixed
@@ -231,14 +254,20 @@ img[class^="size-"],img[class*=" size-"]
 	height menuSize * 3
 	right 0
 	top 0
-	line-height 2em
 	text-align center
+
+#Menu-Revealer
+	font-size 2em	
+	line-height 1.5em
+
+.menu-container
+	font-size 1.5em
 
 .menu-container, .wrapper-menu, .menu, .menu-link
 	display block
 
 .wrapper-menu
-	width 300px
+	width 600px
 	height auto
 	float right
 	top menuSize * 3
@@ -249,13 +278,15 @@ img[class^="size-"],img[class*=" size-"]
 
 .menu-link
 	display block
-	width 300px
+	width 600px
+	text-align left
+	padding .2em
 
 #Home-Link
 	display none
 
 
-@media screen and (min-width:1400px)
+@media screen and (min-width:1000px)
 	
 	body
 		font-size 1.6em
@@ -267,8 +298,10 @@ img[class^="size-"],img[class*=" size-"]
 	.size-1
 		width 310px
 		//height 181px
+		
 	.menu-container
 		width 100%
+		height menuSize
 
 	.wrapper-menu
 		display table
@@ -289,5 +322,42 @@ img[class^="size-"],img[class*=" size-"]
 		display table-cell
 		width auto
 
+	#Menu
+		display table
+		&.open
+			display table
+
 	#Menu-Revealer
 		display none
+
+	.split
+		padding 0
+		.wrapper
+			width 50%
+			float right
+		.wrapper-title
+			width 50%
+			float left
+		.title
+			float right
+			text-align right
+		.info, .title
+			box-sizing border-box
+			padding 1em
+			width 470px
+		.info
+			padding-top menuSize
+			padding-bottom menuSize
+
+	.image-person
+		.image-person-caption-name
+			bottom -10px
+		.image-person-caption-title
+			display block
+
+	.menu-container
+		font-size 1em
+
+	.menu-link
+		padding 0
+		text-align center
