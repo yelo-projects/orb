@@ -1,6 +1,7 @@
 var scrollElement = 'body', $scrollElement
 var $pages = $('.page');
 var $window = $(window);
+var $body = $('body');
 var $menuLinks = $('a.menu-link')
 var resizeTimer;
 
@@ -71,5 +72,5 @@ $window.scroll(function(){
 });
 
 $('#Menu-Revealer').on('click',function(){
-	$('#Menu').toggleClass('open')
+	$body.toggleClass('menu-open')
 })

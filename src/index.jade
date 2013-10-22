@@ -4,7 +4,7 @@ include _mixins
 
 	#Home.page(data-id="Home")
 		#Wrapper-Logo.wrapper
-			#Logo
+			#Logo.logo
 			a.scrollDown(href="#"+public.data.pages[0].slug)
 				i.icon-angle-down
 
@@ -22,6 +22,8 @@ include _mixins
 	a#Menu-Revealer
 		i.icon-ellipsis-vertical
 	#Menu.wrapper.wrapper-menu
+		.menu-logo-wrapper
+			.logo
 		.menu
 			a#Home-Link.menu-link.active(href="#Home")
 				i.icon-fixed-width.icon-home

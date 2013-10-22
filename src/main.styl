@@ -3,6 +3,7 @@
 @import url("http://fonts.googleapis.com/css?family=Playfair+Display|Fjalla+One|Oswald")
 pages = 5
 menuSize = 50px
+mobileMenuWidth = 600px
 
 global-reset()
 
@@ -92,25 +93,6 @@ li
 	position relative
 	clearfix()
 	overflow hidden
-
-.menu-container
-	position absolute
-	position fixed
-	top 0
-	background #000
-	height menuSize
-
-.menu-link
-	text-align center
-	vertical-align middle
-	text-decoration none
-	color #fcfcfc
-	@css{transition: all 300ms ease-in-out;}
-	&:link, &:visited
-		color #fcfcfc
-	&:hover, &.active
-		background-color #fcfcfc
-		color #909090
 
 .social-link
 	background none
@@ -215,14 +197,16 @@ img[class^="size-"],img[class*=" size-"]
 	height 100%
 	display block
 
-#Logo
+.logo
 	display block
 	margin 0 auto
 	width 100%
 	height 100%
-	background url("assets/logo-white.png") no-repeat center center
+	background url("assets/logo-white.svg") no-repeat center center
 	background-size auto 50%
 
+.no-svg #Logo
+	background url("assets/logo-white.png") no-repeat center center
 
 .social-icons
 	position absolute
@@ -241,24 +225,48 @@ img[class^="size-"],img[class*=" size-"]
 	bottom 0
 	font-size 2em
 
-#Menu
-	display none
-	&.open
-		display block
+.menu-container
+	position absolute
+	position fixed
+	top 0
+	background #000
+	height menuSize
+
+.menu-link
+	text-align center
+	vertical-align middle
+	text-decoration none
+	color #fcfcfc
+	@css{transition: all 300ms ease-in-out;}
+	&:link, &:visited
+		color #fcfcfc
+	&:hover, &.active
+		background-color #fcfcfc
+		color #909090
+
+.menu-logo-wrapper
+	height 300px
 
 #Menu-Revealer, .menu-container
 	position absolute
 	position fixed
 	display block
 	width menuSize * 3
-	height menuSize * 3
+	height 100%
 	right 0
 	top 0
 	text-align center
+	background black
+
+#Pages
+	position relative
 
 #Menu-Revealer
 	font-size 2em	
 	line-height 1.5em
+	right 0
+	color #ccc
+	background #9c9c9c
 
 .menu-container
 	font-size 1.5em
@@ -267,97 +275,32 @@ img[class^="size-"],img[class*=" size-"]
 	display block
 
 .wrapper-menu
-	width 600px
-	height auto
+	width mobileMenuWidth
+	height 100%
 	float right
-	top menuSize * 3
-	right 0
+	right - mobileMenuWidth
 	position absolute
 	background black
-	display none
 
 .menu-link
 	display block
-	width 600px
+	width mobileMenuWidth
 	text-align left
 	padding .2em
 
 #Home-Link
 	display none
 
-
-@media screen and (min-width:1000px)
-	
-	body
-		font-size 1.6em
-
-	.size-2
-		width 630px
-		//height 373px
-
-	.size-1
-		width 310px
-		//height 181px
-		
-	.menu-container
-		width 100%
-		height menuSize
-
-	.wrapper-menu
-		display table
-		height 100%
-		width auto
-		float none
-		top auto
-		right auto
-		position relative
-		background none
-
-	.menu
-		display table-row
-		width 100%
-		height 100%
-
-	.menu-link, #Home-Link
-		display table-cell
-		width auto
-
-	#Menu
-		display table
-		&.open
-			display table
-
+#Menu-Revealer:hover, .menu-open
+	#Pages
+		right mobileMenuWidth
 	#Menu-Revealer
-		display none
+		right mobileMenuWidth
+	.wrapper-menu
+		right 0
 
-	.split
-		padding 0
-		.wrapper
-			width 50%
-			float right
-		.wrapper-title
-			width 50%
-			float left
-		.title
-			float right
-			text-align right
-		.info, .title
-			box-sizing border-box
-			padding 1em
-			width 470px
-		.info
-			padding-top menuSize
-			padding-bottom menuSize
+@css{#Pages, #Menu-Revealer, .wrapper-menu{transition: all 300ms ease-in-out;}}
 
-	.image-person
-		.image-person-caption-name
-			bottom -10px
-		.image-person-caption-title
-			display block
 
-	.menu-container
-		font-size 1em
-
-	.menu-link
-		padding 0
-		text-align center
+@media screen and (min-width:1200px)
+	@import "_responsive"
