@@ -186,17 +186,6 @@
 		,	"icon":"icon-pencil"
 		,	"sections":[
 				{
-					"type":"map"
-				,	"size":"3"
-				,	"height":"2"
-				,	"slug":"map"
-				,	"url":"http://mapsengine.google.com/map/u/0/embed?mid=zWtU3D4yYzV8.kHkDeJ_v0pmY"
-				,	"dimensions":{
-						"width":"100%"
-					,	"height":"100%"
-					}
-				}
-			,	{
 					"type":"info"
 				,	"size": 1
 				,	"height": 2
@@ -222,6 +211,17 @@
 						,	"linkedin":"orb"
 						}
 					]
+				}
+			,	{
+					"type":"map"
+				,	"size":"3"
+				,	"height":"2"
+				,	"slug":"map"
+				,	"url":"http://mapsengine.google.com/map/u/0/view?mid=zWtU3D4yYzV8.kHkDeJ_v0pmY"
+				,	"dimensions":{
+						"width":"100%"
+					,	"height":"100%"
+					}
 				}
 			]
 		}
