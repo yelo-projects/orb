@@ -1,0 +1,17 @@
+!!!
+html(lang="en")
+	head
+		title=public.data.title
+		link(rel="icon", type="image/x-icon", href="favicon.ico")
+<<<<<<< HEAD
+		link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css")
+=======
+		link(rel="stylesheet", href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css")
+>>>>>>> 20df9e808b25a78c98ac1e56bf873208bc8300b5
+		link(rel="stylesheet", href="main.css")
+		include _modernizr.js
+	body
+		!= yield
+		script(src="http://code.jquery.com/jquery-1.10.1.min.js")
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")
+		include _main.js

@@ -80,6 +80,7 @@ body
 	font-size 1em
 
 .menu-link
+<<<<<<< HEAD
 	padding 0 .5em
 	text-align center
 	span
@@ -88,3 +89,7 @@ body
 #Home-Link
 	span
 		display none
+=======
+	padding 0
+	text-align center
+>>>>>>> 20df9e808b25a78c98ac1e56bf873208bc8300b5
