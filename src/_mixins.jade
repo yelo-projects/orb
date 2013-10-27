@@ -73,10 +73,10 @@ mixin paragraph(p)
 	p!=p
 
 mixin list(l)
-	ul
+	ul.fa-ul
 		for item in l
 			li
-				i.icon-li.icon-ok
+				i.fa.fa-li.fa-check
 				=item
 
 mixin img(url,alt,width,height)
