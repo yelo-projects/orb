@@ -71,7 +71,7 @@
 						,	"Empowers small and medium vendors"
 						]
 					,	"&nbsp;"
-					,	"<small>download our presentation <a href=\"assets/orb_presentation.pdf\">here</a></small>"
+					,	"download our presentation <a href=\"assets/orb_presentation.pdf\">here</a>"
 					]
 				}
 			,	{
@@ -109,6 +109,78 @@
 					]
 				}
 
+			]
+		}
+	,	{
+			"slug":"Large"
+		,	"title":"Large"
+		,	"special":"split"
+		,	"icon":"calendar"
+		,	"sections":[
+				{
+					"type":"info"
+				,	"slug":"example"
+				,	"paragraphs":[
+						"Proin nec commodo odio, vestibulum aliquet dolor."
+					,	"Mauris ultrices risus eu tellus pharetra rutrum."
+					,	"Integer auctor eleifend dignissim."
+					,	"&nbsp;"
+					,	"<strong><strong>Donec vel magna et dolor malesuada rutrum sit amet eget neque</strong></strong>"
+					,	"&nbsp;"
+					,	"Etiam ultrices est quis est mattis, at porta turpis fermentum. Curabitur quis auctor ligula. Integer dignissim tempor nisi, pellentesque accumsan lacus bibendum eu."
+					,	"Nam fermentum sagittis nulla ultricies hendrerit."
+					,	"Proin non mattis erat. Suspendisse iaculis, ante vitae dignissim dapibus, magna nunc rhoncus sem"
+					]
+				}
+			]
+		}
+	,	{
+			"slug":"Locations"
+		,	"title":"Where"
+		,	"icon":"map-marker"
+		,	"sections":[
+				{
+					"type":"info"
+				,	"size": "half"
+				,	"height": "half"
+				,	"slug":"Demographic"
+				,	"paragraphs":[
+						"implementing ad campaigns on coffee cups in three interconnected hotspots inside Beirut:"
+					,	[
+							"Hamra"
+						,	"Raouche"
+						,	"Gemmayzeh"
+						]
+					]
+				}
+			,	{
+					"type":"image"
+				,	"size": "half"
+				,	"height": "half"
+				,	"url":""
+				,	"alt":"shop selling hotdogs and handing cups"
+				}
+			,	{
+					"type":"image"
+				,	"size": 3
+				,	"height": 3
+				,	"url":""
+				,	"alt":"Bliss street, Abu Naji giving cups"
+				}
+			,	{
+					"type":"image"
+				,	"size": "half"
+				,	"height": "half"
+				,	"url":""
+				,	"alt":"graph showing coverage"
+				}
+			,	{
+					"type":"image"
+				,	"size": "half"
+				,	"height": "half"
+				,	"url":""
+				,	"alt":"someone holding a cup"
+				}
 			]
 		}
 	,	{
