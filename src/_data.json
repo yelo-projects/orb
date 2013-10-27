@@ -4,7 +4,7 @@
 		{
 			"slug":"Who"
 		,	"title":"Who We Are"
-		,	"icon":"icon-book"
+		,	"icon":"book"
 		,	"sections":[
 				{
 					"type":"info"
@@ -40,7 +40,7 @@
 			"slug":"Medium"
 		,	"title":"A New Medium"
 		,	"menuTitle":"Our Medium"
-		,	"icon":"icon-star"
+		,	"icon":"star"
 		,	"sections":[
 				{
 					"type":"image"
@@ -78,7 +78,7 @@
 			"slug":"Large"
 		,	"title":"Large"
 		,	"special":"split"
-		,	"icon":"icon-calendar"
+		,	"icon":"calendar"
 		,	"sections":[
 				{
 					"type":"info"
@@ -100,7 +100,7 @@
 	,	{
 			"slug":"Locations"
 		,	"title":"Where"
-		,	"icon":"icon-map-marker"
+		,	"icon":"map-marker"
 		,	"sections":[
 				{
 					"type":"info"
@@ -128,7 +128,7 @@
 				,	"size": 3
 				,	"height": 3
 				,	"url":""
-				,	"alt":"delivery guy with cups"
+				,	"alt":"Bliss street, Abu Naji giving cups"
 				}
 			,	{
 					"type":"image"
@@ -149,7 +149,7 @@
 	,	{
 			"slug":"Team"
 		,	"title":"Team"
-		,	"icon":"icon-user"
+		,	"icon":"user"
 		,	"sections":[
 				{
 					"type":"person"
@@ -183,7 +183,7 @@
 	,	{
 			"slug":"Contact"
 		,	"title":"Contact Us"
-		,	"icon":"icon-pencil"
+		,	"icon":"pencil"
 		,	"sections":[
 				{
 					"type":"info"

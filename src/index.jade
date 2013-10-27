@@ -6,7 +6,7 @@ include _mixins
 		#Wrapper-Logo.wrapper
 			#Logo.logo
 			a.scrollDown(href="#"+public.data.pages[0].slug)
-				i.icon-angle-down
+				i.fa.fa-angle-down
 
 	for page in public.data.pages
 		- var id = page.slug
@@ -26,10 +26,11 @@ include _mixins
 			.logo
 		.menu
 			a#Home-Link.menu-link.active(href="#Home")
-				i.icon-fixed-width.icon-home
+				i.fa.fa-fixed-width.fa-home
+				span home
 			for page in public.data.pages
 				unless page.skip
 					a.menu-link(href="#"+page.slug,id=page.slug+"-Link")
 						if page.icon
-							i.icon-fixed-width(class=page.icon)
-						= page.menuTitle || page.title
+							i.fa.fa-fixed-width(class="fa-"+page.icon)
+						span= page.menuTitle || page.title
