@@ -2,36 +2,39 @@
 	"title":"Orb"
 ,	"pages":[
 		{
-			"slug":"What"
-		,	"title":"What We Do"
-		,	"menuTitle":"What We Do"
-		,	"icon":"book"
+			"slug":"About"
+		,	"title":"Who We Are"
+		,	"menuTitle":"Who We Are"
+		,	"icon":"star"
 		,	"sections":[
 				{
 					"type":"info"
 				,	"size": 3
 				,	"height": 2
-				,	"slug":"About"
-				,	"title":"What we do"
+				,	"slug":"About-Paragraph"
 				,	"paragraphs":[
-						"Orb offers customers new and innovative mediums for advertising that have"
-					,	[
-							"Actual physical components"
-						,	"High brand visibility"
-						,	"Environmental awareness"
-						,	"Benefits the community as a whole"
-						]
+						"We invent, create, leverage and utilize new media. Each medium is unique in and of itself, and each medium is created to grab your target audience’s attention in a way that engages them. We are the exclusive owners of our media, offering you what no one else can, and consistently breaking ground."
+					,	"Although we are totally innovative, effective and original with the media we introduce, in this digital age, we apply a back-to-basics approach: All our media is physical, highly personal, visible and in most cases mobile."
 					]
 				}
 			]
 		}
 	,	{
-			"slug":"Medium"
-		,	"title":"Our First Medium"
-		,	"menuTitle":"Our First Medium"
-		,	"icon":"star"
+			"slug":"What"
+		,	"title":"What We Do"
+		,	"menuTitle":"What We Do"
+		,	"icon":"trophy"
 		,	"sections":[
 				{
+					"type":"info"
+				,	"size": 3
+				,	"height":1
+				,	"slug":""
+				,	"paragraphs":[
+						"We have just launched our first service:"
+					]
+				}
+			,	{
 					"type":"image"
 				,	"size": 2
 				,	"height": 2
@@ -44,7 +47,7 @@
 				,	"height": 1
 				,	"slug":"Explanation"
 				,	"paragraphs":[
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros risus"
+						"Imagine having your ad message on every cup of espresso, nescafe or tea sold in three of Beirut’s most densely residential, commercial and educational hubs. That is precisely what we do."
 					]
 				}
 			,	{
@@ -61,15 +64,7 @@
 				,	"slug":"Benefits"
 				,	"title":"How You Benefit"
 				,	"paragraphs":[
-						"Your ad is personal and mobile, visible to the carrier of the cup and to the people they encounter. The destination is always varied."
-					,	"&nbsp;"
-					,	"<strong>You are literally placing your ads in the consumer’s hand.</strong>"
-					,	"Our Cup Campaign"
-					,	[
-							"Is Environmentally friendly"
-						,	"Is Healthier for the consumer"
-						,	"Empowers small and medium vendors"
-						]
+						"Your ad message for 30 days, in 30 outlets in 3 highly residential, commercial and educational hubs branded on approx...170,000 cups."
 					,	"&nbsp;"
 					,	"<small>download our presentation <a href=\"assets/orb_presentation.pdf\">here</a></small>"
 					]
@@ -86,7 +81,7 @@
 				,	"size": 1
 				,	"height": 2
 				,	"slug":"Places"
-				,	"title":"A New Reach"
+				,	"title":"How You Benefit"
 				,	"paragraphs":[
 						"implementing ad campaigns on coffee cups in three interconnected hotspots inside Beirut:"
 					,	[
@@ -101,47 +96,30 @@
 				,	"size": 2
 				,	"height": 2
 				,	"slug":"Demographic"
-				,	"title":"The 18 to 25 Demographic at a Glance"
 				,	"paragraphs":[
-						"With the large expanse of downloadable and streamable online content, rarely do they listen to the radio or watch TV."
-					,	"This demographic is always on the go and are more likely to skim over, rather than read and engage in your online content."
-					,	"Studies have shown that they, and other demographics, tend to ignore the thousands of clickable online ads."
+						"THE VENDORS WE SUPPLY ARE PROXIMATE TO MOST MAJOR UNIVERSITIES, university DORMITORIES AND RESIDENCES In Beirut frequented by students."
 					]
 				}
-
-			]
-		}
-	,	{
-			"slug":"Team"
-		,	"title":"Team"
-		,	"icon":"user"
-		,	"sections":[
-				{
-					"type":"person"
-				,	"url": "1"
-				,	"name":"Ala Matar"
-				,	"title":"Chief Executive Officer"
+			,	{
+					"type":"image"
+				,	"size": 1
+				,	"height": 1
+				,	"url":""
+				,	"alt":"a photo of cups"
 				}
 			,	{
-					"type":"person"
-				,	"url": "2"
-				,	"name":"Ala Matar"
-				,	"title":"Chief Executive Officer"
+					"type":"image"
+				,	"size": 1
+				,	"height": 1
+				,	"url":""
+				,	"alt":"a photo of cups"
 				}
 			,	{
-					"type":"person"
-				,	"url": "3"
-				,	"name":"Ala Matar"
-				,	"title":"Chief Executive Officer"
-				}
-			,	{
-					"type":"info"
-				,	"size": 3
-				,	"height": 2
-				,	"slug":"People"
-				,	"paragraphs":[
-						"Praesent mollis molestie diam tincidunt cursus. Curabitur mattis orci nulla, eget euismod elit ultrices id. Interdum et malesuada fames ac ante ipsum primis in faucibus"
-					]
+					"type":"image"
+				,	"size": 1
+				,	"height": 1
+				,	"url":""
+				,	"alt":"a photo of cups"
 				}
 			]
 		}

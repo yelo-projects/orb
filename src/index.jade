@@ -26,11 +26,11 @@ include _mixins
 			.logo
 		.menu
 			a#Home-Link.menu-link.active(href="#Home")
-				//i.fa.fa-fixed-width.fa-home
+				i.fa.fa-fixed-width.fa-home
 				span home
 			for page in public.data.pages
 				unless page.skip
 					a.menu-link(href="#"+page.slug,id=page.slug+"-Link")
 						if page.icon
-							//i.fa.fa-fixed-width(class="fa-"+page.icon)
+							i.fa.fa-fixed-width(class="fa-"+page.icon)
 						span= page.menuTitle || page.title
