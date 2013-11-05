@@ -38,9 +38,11 @@ small{font-size:.8em}
 .social-link:link,.social-link:visited{color:#000}
 .social-link:hover,.social-link:active{color:#fcfcfc;background:#000}
 .anchor{position:absolute;display:block;width:1px;height:1px;top:0}
-.info{padding:20px;position:relative;background:#fcfcfc}
-.image{text-align:center;}
+.info{padding:20px;position:relative;background:#fcfcfc;}
+.info.important{background:transparent;font-size:2.5em;color:#fcfcfc}
+.image{text-align:center;position:relative;}
 .image img{margin:0 auto}
+.overlay{position:absolute;right:0;bottom:0;padding:1em;margin:1em;width:50%;background:#000;background:rgba(0,0,0,0.5);color:#fdfdfd}
 .size-1,.size-2,.size-3,.size-half{width:950px;min-height:181px;margin:5px}
 .size-half{width:470px}
 .height-1{height:181px}

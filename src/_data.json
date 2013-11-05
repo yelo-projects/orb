@@ -10,7 +10,6 @@
 				{
 					"type":"info"
 				,	"size": 3
-				,	"height": 2
 				,	"slug":"About-Paragraph"
 				,	"paragraphs":[
 						"We invent, create, leverage and utilize new media. Each medium is unique in and of itself, and each medium is created to grab your target audience’s attention in a way that engages them. We are the exclusive owners of our media, offering you what no one else can, and consistently breaking ground."
@@ -27,35 +26,21 @@
 		,	"sections":[
 				{
 					"type":"info"
+				,	"class":"important"
 				,	"size": 3
 				,	"height":1
-				,	"slug":""
+				,	"slug":"first-service"
 				,	"paragraphs":[
-						"We have just launched our first service:"
+						"We have just launched our first service"
 					]
 				}
 			,	{
 					"type":"image"
-				,	"size": 2
-				,	"height": 2
+				,	"size": 3
+				,	"height": 3
 				,	"url":""
 				,	"alt":"a photo of cups"
-				}
-			,	{
-					"type":"info"
-				,	"size": 1
-				,	"height": 1
-				,	"slug":"Explanation"
-				,	"paragraphs":[
-						"Imagine having your ad message on every cup of espresso, nescafe or tea sold in three of Beirut’s most densely residential, commercial and educational hubs. That is precisely what we do."
-					]
-				}
-			,	{
-					"type":"image"
-				,	"size": 1
-				,	"height": 1
-				,	"url":""
-				,	"alt":"a photo of one cup"
+				,	"overlay":"Imagine having your ad message on every cup of espresso, nescafe or tea sold in three of Beirut’s most densely residential, commercial and educational hubs. That is precisely what we do."
 				}
 			,	{
 					"type":"info"
@@ -97,7 +82,7 @@
 				,	"height": 2
 				,	"slug":"Demographic"
 				,	"paragraphs":[
-						"THE VENDORS WE SUPPLY ARE PROXIMATE TO MOST MAJOR UNIVERSITIES, university DORMITORIES AND RESIDENCES In Beirut frequented by students."
+						"The vendors we supply are proximate to most major universities, university <em>dormitories</em> & <em>residences</em> in Beirut frequented by students."
 					]
 				}
 			,	{

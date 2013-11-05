@@ -5,6 +5,8 @@
 mixin sectionImage(image,c)
 	.image(class=c)
 		+placeholder(image.alt,image.url,image.type,image.size)
+		if image.overlay
+			span.overlay=image.overlay
 
 mixin sectionPerson(image)
 	.image.size-1.image-person
@@ -20,7 +22,7 @@ mixin sectionMap(map,c)
 
 mixin sectionInfo(section,c)
 	- var id = section.slug
-	.info(class=c, id="Info-"+id)
+	.info(class=c+(section.class?" "+section.class:""), id="Info-"+id)
 		if section.title
 			h3=section.title
 		for paragraph in section.paragraphs
