@@ -12,7 +12,7 @@
 				,	"size": 3
 				,	"slug":"About-Paragraph"
 				,	"paragraphs":[
-						"We invent, create, leverage and utilize new media. Each medium is unique in and of itself, and each medium is created to grab your target audience’s attention in a way that engages them. We are the exclusive owners of our media, offering you what no one else can, and consistently breaking ground."
+						"We invent, create, leverage and utilize new media. Each medium is unique in and of itself, and each medium is created to grab your target audience’s attention in a way that engages them. We are the exclusive owners of our media, offering you what no one else can, and consistently breaking new ground."
 					,	"Although we are totally innovative, effective and original with the media we introduce, in this digital age, we apply a back-to-basics approach: All our media is physical, highly personal, visible and in most cases mobile."
 					]
 				}
@@ -45,12 +45,9 @@
 			,	{
 					"type":"info"
 				,	"size": 3
-				,	"height": 2
 				,	"slug":"Benefits"
-				,	"title":"How You Benefit"
 				,	"paragraphs":[
-						"Your ad message for 30 days, in 30 outlets in 3 highly residential, commercial and educational hubs branded on approx...170,000 cups."
-					,	"&nbsp;"
+						"<strong>Your ad message for 30 days, in 30 outlets in 3 highly residential, commercial and educational hubs branded on approximately 170,000 cups.</strong>"
 					,	"<small>download our presentation <a href=\"assets/orb_presentation.pdf\">here</a></small>"
 					]
 				}
@@ -63,8 +60,7 @@
 				}
 			,	{
 					"type":"info"
-				,	"size": 1
-				,	"height": 2
+				,	"size": 3
 				,	"slug":"Places"
 				,	"title":"How You Benefit"
 				,	"paragraphs":[
@@ -74,15 +70,8 @@
 						,	"Raouche"
 						,	"Gemmayzeh"
 						]
-					]
-				}
-			,	{
-					"type":"info"
-				,	"size": 2
-				,	"height": 2
-				,	"slug":"Demographic"
-				,	"paragraphs":[
-						"The vendors we supply are proximate to most major universities, university <em>dormitories</em> & <em>residences</em> in Beirut frequented by students."
+						, "&nbsp;"
+						, "The vendors we supply are proximate to most major universities, university <em>dormitories</em> & <em>residences</em> in Beirut frequented by students."
 					]
 				}
 			,	{
@@ -105,6 +94,17 @@
 				,	"height": 1
 				,	"url":""
 				,	"alt":"a photo of cups"
+				}
+			,	{
+					"type":"map"
+				,	"size":"3"
+				,	"height":"3"
+				,	"slug":"orb_locations"
+				,	"url":"https://mapsengine.google.com/map/u/3/embed?mid=zUN9Hop_kaEM.kgEVULt1gKh4"
+				,	"dimensions":{
+						"width":"100%"
+					,	"height":"100%"
+					}
 				}
 			]
 		}
@@ -115,29 +115,22 @@
 		,	"sections":[
 				{
 					"type":"info"
-				,	"size": 1
-				,	"height": 2
-				,	"slug":"Reach"
-				,	"paragraphs":[
-						"If you think we can help you, we'd love to <a href=\"mailto:a@b.com\">hear from you</a>"
-					]
-				}
-			,	{
-					"type":"info"
-				,	"size": 2
-				,	"height": 2
+				,	"size": 3
 				,	"slug":"Address"
 				,	"paragraphs":[
-						"El Bouchrieh, Lebanon"
+						"Sed El Buchrieh, Lebanon"
 					,	"Mar Takla Street"
 					,	"St Joseph Center, 6th Floor"
-					,	"&nbsp;"
-					,	"phone: <em>+961 3 854 990</em>"
+					,	"POBOX 90990"
+					,	"Beirut, Lebanon"
+					,	"phone: <em>+961 1 883390</em> / <em>+961 3 854990</em>"
 					,	{
 							"facebook":"orb"
 						,	"twitter":"orb"
 						,	"linkedin":"orb"
 						}
+					, "<hr>"
+					, "If you think we can help you, we'd love to <a href=\"mailto:ala@orb-me.com\">hear from you</a>"
 					]
 				}
 			,	{

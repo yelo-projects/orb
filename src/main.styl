@@ -1,29 +1,46 @@
 @import "_nib"
+@import "_mixins"
 @import url("http://fonts.googleapis.com/css?family=Playfair+Display|Muli")
 pages = 5
 menuSize = 50px
 mobileMenuWidth = 600px
+gutter = 10px
+unitWidth3 = 960px
+unitWidth1 = (unitWidth3/3)
+unitWidth2 = (unitWidth1*2)
+unitWidthHalf = (unitWidth3/2)
+unitHeight1 = (unitWidth1 * 0.6)
+unitHeight2 = (unitWidth2 * 0.6)
+unitHeight3 = (unitWidth3 * 0.6)
+unitHeightHalf = (unitWidthHalf * 0.6)
+emphasisColor = #000
+linkColor = #6986F8
+lightColor = #fcfcfc
+darkColor = #222
+textColor = #444
+textTitleColor = #808080
 
 global-reset()
 
 background-cover(url="")
-	background url("http://lorempixel.com/1000/800/"+url) fixed repeat
-	background-size cover
+	background url("assets/bgs/"+url+".png") fixed repeat
+	//background url("http://lorempixel.com/1000/800/"+url) fixed repeat
+	//background-size cover
 
 html, body 
 	height 100%
 
 body
 	font-family 'Muli', "Century Gothic", sans-serif;
-	background #f4f4f7
-	color #444
+	background lightColor
+	color textColor
 	margin 0
 	font-size 2.3em
 
 h1, h2, h3, h4, h5
 	font-family 'Playfair Display', serif
 	text-transform 	uppercase
-	color gray
+	color textTitleColor
 
 h1
 	font-size 65px
@@ -39,8 +56,13 @@ p
 	text-align justify
 	word-break keep-all
 	hyphens auto
+	margin-bottom 1em
+	line-height 1.5em
 	a, a:link, a:visited, a:hover
-		color #6986F8
+		color linkColor
+hr
+	width 80%
+	color textTitleColor
 
 strong
 	font-size 1.1em
@@ -49,7 +71,7 @@ strong
 		font-size 1.2em
 
 em
-	color #6986F8
+	color emphasisColor
 
 li
 	text-indent .2em
@@ -68,6 +90,29 @@ small
 	height (100% * pages)
 	clearfix()
 
+.info
+	padding 20px
+	position relative
+	background lightColor
+	box-shadow(0 0 gutter rgba(10,10,10,.1))
+	&.important
+		background transparent
+		font-size 1.5em
+		color lightColor
+		box-shadow(none)
+		padding 0
+		p
+			line-height 1em
+
+.title
+	color lightColor
+	text-shadow 0 -1px 0 rgba(0,0,0,0.15),0 1px 0 rgba(255,255,255,0.8)
+	.fa
+		font-size .8em
+		position relative
+		top -0.1em
+		margin-right .5em
+
 .page
 	float left
 	width 100%
@@ -75,23 +120,25 @@ small
 	clearfix()
 	position relative
 	padding menuSize 0
-	background #0c0c0c
-	.title
-		color #fff
+	background-cover "dark/skewed_print"
 	&:nth-child(even)
+		background-cover "light/debut_light"
+		.info
+			background-transparency(lightColor,.3)
 		.title
-			color #000
+			color darkColor
+			text-shadow:0 -1px 0 rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.4)
 	&:nth-child(2)
-		background-cover "nature/1"
+		//background-cover "nature/1"
 	&:nth-child(4)
-		background-cover "nature/2"
+		//background-cover "stressed_linen"
 	&:nth-child(6)
-		background-cover "nature/3"
+		//background-cover "txture"
 	&:last-child
 		padding-bottom 100px
 
 .wrapper, .wrapper-title, .wrapper-menu
-	width 960px
+	width unitWidth3
 	margin 0 auto
 	position relative
 	clearfix()
@@ -100,9 +147,9 @@ small
 .social-link
 	background none
 	&:link,&:visited
-		color #000
+		color darkColor
 	&:hover,&:active
-		color #fcfcfc
+		color lightColor
 		background black
 
 .anchor
@@ -111,15 +158,6 @@ small
 	width 1px
 	height 1px
 	top 0
-
-.info
-	padding 20px
-	position relative
-	background #fcfcfc
-	&.important
-		background transparent
-		font-size 2.5em
-		color #fcfcfc
 
 .image
 	text-align center
@@ -139,35 +177,36 @@ small
 	color #fdfdfd
 
 .size-1, .size-2, .size-3, .size-half
-	width 950px
+	width (unitWidth3 - (gutter * 2))
 	min-height 181px
-	margin 5px
+	margin gutter
 
 .size-half
-	width 470px
+	width (unitWidthHalf - (gutter * 2))
 
 .height-1
-	height 181px
+	height (unitHeight1 - (gutter * 2))
 
 .height-2
-	height 373px
+	height (unitHeight2 - (gutter * 2))
 
 .height-3
-	height 565px
+	height (unitHeight3 - (gutter * 2))
 
 .height-half
-	height 277px
+	height (unitHeightHalf - (gutter * 2))
 
+/*
 .image-person, .image-person img
-	width 310px
-	height 310px
+	width (unitWidth1 - (gutter * 2))
+	height (unitWidth1 - (gutter * 2))
 	max-width 100%
 	position relative
 
 .image-person
-	border-radius 160px
+	border-radius unitWidth1
 	overflow hidden
-	color #fff
+	color lightColor
 	margin-bottom 20px
 	&:after
 		content ""
@@ -184,7 +223,7 @@ small
 		height 30px
 		width 100%
 		left 0
-		background-color #000
+		background-color darkColor
 		background-color rgba(0,0,0,.4)
 		text-align center
 	.image-person-caption-name
@@ -195,6 +234,7 @@ small
 		display none
 		font-size .8em
 		line-height 1.4em
+*/
 
 img[class^="size-"],img[class*=" size-"]
 	margin 0 auto
@@ -233,7 +273,7 @@ img[class^="size-"],img[class*=" size-"]
 		display none
 
 .scrollDown
-	color #fff
+	color lightColor
 	padding 10px
 	position absolute
 	bottom 0
@@ -250,13 +290,13 @@ img[class^="size-"],img[class*=" size-"]
 	vertical-align middle
 	text-decoration none
 	text-transform uppercase
-	color #fcfcfc
+	color lightColor
 	@css{transition: all 300ms ease-in-out;}
 	&:link, &:visited
-		color #fcfcfc
+		color lightColor
 	&:hover, &.active
-		background-color #fcfcfc
-		color #909090
+		background-color lightColor
+		color textTitleColor
 
 .menu-logo-wrapper
 	height 300px
@@ -278,7 +318,7 @@ img[class^="size-"],img[class*=" size-"]
 	font-size 2em	
 	line-height 1.5em
 	right 0
-	color #ccc
+	color textTitleColor
 	height menuSize * 3
 	background #9c9c9c
 
@@ -321,7 +361,7 @@ img[class^="size-"],img[class*=" size-"]
 	padding-bottom: 56.25%
 	width 100%
 	height 0
-	background #fcfcfc
+	background lightColor
 	box-sizing border-box
 	iframe
 		position absolute
@@ -332,7 +372,7 @@ img[class^="size-"],img[class*=" size-"]
 		width 100%
 		height 100%
 		border 1px solid black
-		background #fcfcfc
+		background lightColor
 
 @media screen and (min-width:1200px)
 	@import "_responsive"

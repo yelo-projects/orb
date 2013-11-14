@@ -57,15 +57,17 @@ mixin section(section)
 
 mixin placeholder(alt,url,type,size)
 	- var width, height;
+	- var base = 960;
+	- var gutter = 10;
+	- var size_1 = (base/3) - (gutter * 2);
+	- var size_2 = ((base/3)*2) - (gutter * 2);
+	- var size_3 = base - (gutter * 2);
+	- var size_half = (base/2) - gutter * 2;
 	- if(type=="person"){
-	-	width = 310; height = 310
+	-	width = size_1; height = size_1
 	- }else{
-	- var size_1 = 310;
-	- var size_2 = 630;
-	- var size_3 = 950;
-	- var size_half = 470;
 	- var width = (size=="half") ?  size_half : (size==1) ? size_1 : (size==2) ? size_2 : size_3;
-	- var height = (width * 0.6) - 5;
+	- var height = (width * 0.6) - gutter;
 	- }
 	- if(!url){url="http://placehold.it/"+width+"x"+height+"&text="+alt;}
 	- else{url="http://lorempixel.com/"+width+"/"+height+"/"+url+"/"+(Math.floor(Math.random() * 10)+1);}

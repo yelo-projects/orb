@@ -1,0 +1,28 @@
+add a page: "So you're interested?" + corresponding QR code
+
+General:
+    ✔ add more space in general
+    ✘ take care of unicode stuff
+    ✔ See how to make the text look less like just flatly posed on the background
+    ✔ "We Have Launched our first Service":
+        ✔ reduce space on top
+        ✔ add space on bottom
+        ✔ pull left so it aligns with title
+    ✔ emphasis on text -> don't make it blue
+    ✔ choose a white and a dark pattern backgrounds
+
+Copy:
+    ✔ "and consistently breaking NEW ground"
+    ✔ "approx" -> "approximately"
+    ✔ first "How you benefit" -> remove, and make the text bigger and bold
+    ✔ Second "How you benefit" -> collapse two blocks into one
+    ✔ do a check on all capital letters and final dots (generic syntax)
+    ✔ "contact us" text -> collapse in one block, insert full address
+
+Menu:
+    - icons proposals
+
+PDF:
+    ✘ right after page 4: add a google map highlighting relevant streets
+    ✔ add full address
+    ✘ make sure all corrections are implemented

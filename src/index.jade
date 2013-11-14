@@ -13,14 +13,16 @@ include _mixins
 		.page(id=id,data-id=id,class=(page.special? page.special:''))
 			if page.title
 				div(class="wrapper-title", id="Wrapper-Title-"+id)
-					h1(class="title", name=id, id="Title-"+id)=page.title
+					h1(class="title", name=id, id="Title-"+id)
+						i.fa.fa-fixed-width(class="fa-"+page.icon)
+						= page.title
 			.wrapper(id="Wrapper-"+id)
 				for section in page.sections
 					+section(section)
 
 #Navigation.menu-container
 	a#Menu-Revealer
-		i.icon-ellipsis-vertical
+		i.fa.fa-ellipsis-vertical
 	#Menu.wrapper.wrapper-menu
 		.menu-logo-wrapper
 			.logo
