@@ -1,4 +1,5 @@
-add a page: "So you're interested?" + corresponding QR code
+Additional
+    ✔ add a page: "So you're interested?" + corresponding QR code
 
 General:
     ✔ add more space in general
@@ -20,7 +21,7 @@ Copy:
     ✔ "contact us" text -> collapse in one block, insert full address
 
 Menu:
-    - icons proposals
+    ✔ icons proposals
 
 PDF:
     ✘ right after page 4: add a google map highlighting relevant streets
