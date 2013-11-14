@@ -5,7 +5,7 @@
 			"slug":"About"
 		,	"title":"Who We Are"
 		,	"menuTitle":"Who We Are"
-		,	"icon":"star"
+		,	"icon":"bullseye"
 		,	"sections":[
 				{
 					"type":"info"
@@ -22,7 +22,7 @@
 			"slug":"What"
 		,	"title":"What We Do"
 		,	"menuTitle":"What We Do"
-		,	"icon":"trophy"
+		,	"icon":"cog"
 		,	"sections":[
 				{
 					"type":"info"
@@ -52,13 +52,6 @@
 					]
 				}
 			,	{
-					"type":"image"
-				,	"size": 3
-				,	"height": 3
-				,	"url":""
-				,	"alt":"another photo of a cup"
-				}
-			,	{
 					"type":"info"
 				,	"size": 3
 				,	"slug":"Places"
@@ -74,44 +67,12 @@
 						, "The vendors we supply are proximate to most major universities, university <em>dormitories</em> & <em>residences</em> in Beirut frequented by students."
 					]
 				}
-			,	{
-					"type":"image"
-				,	"size": 1
-				,	"height": 1
-				,	"url":""
-				,	"alt":"a photo of cups"
-				}
-			,	{
-					"type":"image"
-				,	"size": 1
-				,	"height": 1
-				,	"url":""
-				,	"alt":"a photo of cups"
-				}
-			,	{
-					"type":"image"
-				,	"size": 1
-				,	"height": 1
-				,	"url":""
-				,	"alt":"a photo of cups"
-				}
-			,	{
-					"type":"map"
-				,	"size":"3"
-				,	"height":"3"
-				,	"slug":"orb_locations"
-				,	"url":"https://mapsengine.google.com/map/u/3/embed?mid=zUN9Hop_kaEM.kgEVULt1gKh4"
-				,	"dimensions":{
-						"width":"100%"
-					,	"height":"100%"
-					}
-				}
 			]
 		}
 	,	{
 			"slug":"Contact"
 		,	"title":"Contact Us"
-		,	"icon":"pencil"
+		,	"icon":"comment"
 		,	"sections":[
 				{
 					"type":"info"
