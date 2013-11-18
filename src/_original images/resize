@@ -1,0 +1,1 @@
+mogrify -resize 1880 -gravity center -crop 1880x1108+0+0 +repage -quality 50% -path ../images/ *.jpg
