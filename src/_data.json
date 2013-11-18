@@ -37,9 +37,8 @@
 			,	{
 					"type":"image"
 				,	"size": 3
-				,	"height": 3
-				,	"url":"assets/cup_sketch.jpg"
-				,	"alt":"a photo of cups"
+				,	"url":"images/cup_03.jpg"
+				,	"alt":"An Example of our product"
 				,	"overlay":"Imagine having your ad message on every cup of espresso, nescafe or tea sold in three of Beirut’s most densely residential, commercial and educational hubs. That is precisely what we do."
 				}
 			,	{
@@ -50,6 +49,12 @@
 						"<strong>Your ad message for 30 days, in 30 outlets in 3 highly residential, commercial and educational hubs branded on approximately 170,000 cups.</strong>"
 					,	"<small>download our presentation <a href=\"assets/orb_presentation.pdf\">here</a></small>"
 					]
+				}
+			,	{
+					"type":"image"
+				,	"size": 3
+				,	"url":"images/many_cups_1_coffee_machine.jpg"
+				,	"alt":"Stacked cups"
 				}
 			,	{
 					"type":"info"
@@ -66,6 +71,18 @@
 						, "&nbsp;"
 						, "The vendors we supply are proximate to most major universities, university <em>dormitories</em> & <em>residences</em> in Beirut frequented by students."
 					]
+				}
+			,	{
+					"type":"image"
+				,	"size": 3
+				,	"url":"images/1_girl_1_cup.jpg"
+				,	"alt":"A girl holding an orb cup"
+				}
+			,	{
+					"type":"image"
+				,	"size": 3
+				,	"url":"images/1_hand_1_cup.jpg"
+				,	"alt":"Orb cups at night"
 				}
 			]
 		}
