@@ -6,6 +6,7 @@
 	var $menuLinks = $('a.menu-link')
 	var $menu = $('#Navigation')
 	var resizeTimer;
+	var isMobile = function(){return $menu.css('display') == 'none';}
 
 	// determine scrolling element
 	$('html, body').each(function(){
@@ -46,7 +47,9 @@
 		var hash = '#'+id;
 		var $menuLink = $(hash+"-Link").addClass('active')
 		$menuLinks.not($menuLink).removeClass('active');
-		var setHash = function() {window.location.hash = hash;};
+		if(!isMobile()){
+			var setHash = function() {window.location.hash = hash;};
+		}
 		if(time){
 			$scrollElement.stop().animate({scrollTop: $page.offset().top}, time, 'swing', setHash)
 		}else{
@@ -73,17 +76,19 @@
 		}, 100);
 	});
 
-	$window.scroll(function(){
-		var x = $scrollElement.scrollTop();
-		var pos = parseInt(-x / 10);
-		$pages.css('background-position', '0% ' +  pos + 'px').each(function(){
-			var $page = $(this);
-			if(isScrolledIntoView($page)){
-				setPage($page,this.id,0);
-				return false;
-			}
-		})
-	});
+	if(!isMobile()){
+		$window.scroll(function(){
+			var x = $scrollElement.scrollTop();
+			var pos = parseInt(-x / 10);
+			$pages.css('background-position', '0% ' +  pos + 'px').each(function(){
+				var $page = $(this);
+				if(isScrolledIntoView($page)){
+					setPage($page,this.id,0);
+					return false;
+				}
+			})
+		});
+	}
 
 	$('#Menu-Revealer').on('click',function(){
 		$body.toggleClass('menu-open')
