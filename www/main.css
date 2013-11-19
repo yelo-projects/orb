@@ -31,12 +31,12 @@ small{font-size:.8em}
 .page{float:left;width:100%;margin:0 auto;zoom:1;position:relative;padding:50px 0;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background:url("assets/bgs/dark/skewed_print.png") fixed repeat;}
 .page:before,.page:after{content:"";display:table}
 .page:after{clear:both}
-.page:nth-child(even){background:url("assets/bgs/dark/light/debut_light.png") fixed repeat;}
-.page:nth-child(even) .info{background:#fcfcfc;background:rgba(252,252,252,0.3);}
+.page:nth-child(even){background:url("assets/bgs/dark/light/debut_light.png") fixed repeat;color:#000;}
+.page:nth-child(even) .info{background:#fcfcfc;background:rgba(252,252,252,0.4);}
 .lt-ie8 .page:nth-child(even) .info{zoom:1}
-.lt-ie9 .page:nth-child(even) .info{background:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4CFCFCFC,endColorstr=#4CFCFCFC);}
+.lt-ie9 .page:nth-child(even) .info{background:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FCFCFC,endColorstr=#66FCFCFC);}
 .lt-ie9 .page:nth-child(even) .info:nth-child(n){filter:none}
-.page:nth-child(even) .title{color:#000;text-shadow:0 -1px 0 rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.4)}
+.page:nth-child(even) .title{color:#000;text-shadow:0 -1px 0 rgba(255,255,255,0.3),0 1px 0 rgba(255,255,255,0.4)}
 .page:nth-child(2){background:url("images/blurred_03.jpg") fixed repeat}
 .page:nth-child(4){background:url("images/blurred_04.jpg") fixed repeat}
 .page:last-child{padding-bottom:100px}
