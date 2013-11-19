@@ -22,22 +22,6 @@
 
 	$scrollElement = $(scrollElement);
 
-	function isScrolledIntoView($elem,offset,limit){
-
-		var docViewTop = $window.scrollTop();
-		var docViewBottom = docViewTop + $window.height();
-
-		var elemTop = $elem.offset().top;
-		if(offset===true){
-			var elemBottom = elemTop + $elem.height();
-		}
-		else{
-			elemBottom = elemTop + (offset ? offset : 2);
-		}
-
-		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop) && (elemTop <= docViewTop + (limit? limit : 100)));
-	}
-
 	function setPage($page,id,time){
 		if(id == 'Home'){
 			$menu.removeClass('fixed');
@@ -47,13 +31,15 @@
 		var hash = '#'+id;
 		var $menuLink = $(hash+"-Link").addClass('active')
 		$menuLinks.not($menuLink).removeClass('active');
-		if(!isMobile()){
-			var setHash = function() {window.location.hash = hash;};
-		}
+		var setHash = function() {
+			if(isMobile()){return;}
+			window.location.hash = hash;
+		};
 		if(time){
+			console.log($page,$scrollElement)
 			$scrollElement.stop().animate({scrollTop: $page.offset().top}, time, 'swing', setHash)
 		}else{
-			setHash
+			setHash();
 		}
 	}
 
@@ -64,19 +50,38 @@
 		if(!$target.length){return false;}
 		setPage($target,id,500)
 		event.preventDefault();
+		return false;
 	})
 
-	/* Force snap to panel on resize. */
-	$window.resize(function() {
-		window.clearTimeout(resizeTimer);
-		resizeTimer = window.setTimeout(function() {
-			var hash = window.location.hash ? window.location.hash : '#Home';
-			var id = hash.replace('#','');
-			setPage($(hash),id,200)
-		}, 100);
-	});
-
 	if(!isMobile()){
+
+		function isScrolledIntoView($elem,offset,limit){
+
+			var docViewTop = $window.scrollTop();
+			var docViewBottom = docViewTop + $window.height();
+
+			var elemTop = $elem.offset().top;
+			if(offset===true){
+				var elemBottom = elemTop + $elem.height();
+			}
+			else{
+				elemBottom = elemTop + (offset ? offset : 2);
+			}
+
+			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop) && (elemTop <= docViewTop + (limit? limit : 100)));
+		}
+
+		/* Force snap to panel on resize. */
+		$window.resize(function() {
+			window.clearTimeout(resizeTimer);
+			resizeTimer = window.setTimeout(function() {
+				var hash = window.location.hash ? window.location.hash : '#Home';
+				var id = hash.replace('#','');
+				setPage($(hash),id,200)
+			}, 100);
+		});
+
+		
 		$window.scroll(function(){
 			var x = $scrollElement.scrollTop();
 			var pos = parseInt(-x / 10);
