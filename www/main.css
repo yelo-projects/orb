@@ -37,7 +37,6 @@ small{font-size:.8em}
 .lt-ie9 .page:nth-child(even) .info{background:transparent;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FCFCFC,endColorstr=#66FCFCFC);}
 .lt-ie9 .page:nth-child(even) .info:nth-child(n){filter:none}
 .page:nth-child(even) .title{color:#000;text-shadow:0 -1px 0 rgba(255,255,255,0.3),0 1px 0 rgba(255,255,255,0.4)}
-.page:nth-child(2){background:url("images/blurred_03.jpg") fixed repeat}
 .page:nth-child(4){background:url("images/blurred_04.jpg") fixed repeat}
 .page:last-child{padding-bottom:100px}
 .wrapper,.wrapper-title,.wrapper-menu{width:960px;margin:0 auto;position:relative;zoom:1;overflow:hidden}
