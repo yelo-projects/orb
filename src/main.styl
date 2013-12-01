@@ -125,7 +125,7 @@ small
 		background url("assets/bgs/dark/light/debut_light.png") fixed repeat
 		color black
 		.info
-			background-transparency(lightColor,.4)
+			background-transparency(lightColor,.7)
 		.title
 			color #000
 			text-shadow:0 -1px 0 rgba(255,255,255,0.3),0 1px 0 rgba(255,255,255,0.4)
@@ -140,14 +140,6 @@ small
 	position relative
 	clearfix()
 	overflow hidden
-
-.social-link
-	background none
-	&:link,&:visited
-		color darkColor
-	&:hover,&:active
-		color lightColor
-		background black
 
 .anchor
 	position absolute
@@ -260,12 +252,22 @@ img[class^="size-"],img[class*=" size-"]
 	background url("assets/logo-white.png") no-repeat center center
 
 .social-icons
-	position absolute
-	bottom 0
-	right 0
+	text-align right
 
 .social-link
 	font-size 2em
+	background none
+	padding .5em
+	min-width 1em
+	min-height 1em
+	text-align center
+	text-decoration none
+	font-style normal
+	&:link,&:visited
+		color darkColor
+	&:hover,&:active
+		color lightColor
+		background black
 	span
 		display none
 

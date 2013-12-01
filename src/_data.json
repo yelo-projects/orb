@@ -102,13 +102,13 @@
 					,	"POBOX 90990"
 					,	"Beirut, Lebanon"
 					,	"phone: <em>+961 1 883390</em> / <em>+961 3 854990</em>"
-					,	{
-							"facebook":"orb"
-						,	"twitter":"orb"
-						,	"linkedin":"orb"
-						}
 					, "<hr>"
 					, "If you think we can help you, we&#39d love to <a href=\"mailto:ala@orb-me.com\">hear from you</a>"
+					,	{
+							"facebook":"orbbeirut"
+						,	"twitter":"orb_beirut"
+						,	"linkedin":"company/orb-sarl"
+						}
 					]
 				}
 			,	{

@@ -36,8 +36,8 @@ mixin sectionInfo(section,c)
 				when Object
 					.social-icons
 						for url,network in paragraph
-							a.social-link.icon-stack(href="http://www."+network+".com/"+url,target="_blank",title="meet us on "+network)
-								i(class="icon-"+network)
+							a.social-link.fa(href="http://www."+network+".com/"+url,target="_blank",title="meet us on "+network)
+								i(class="fa-"+network)
 								span=network
 				default
 					p
