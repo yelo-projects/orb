@@ -37,7 +37,7 @@ mixin sectionInfo(section,c)
 					.social-icons
 						for url,network in paragraph
 							a.social-link.fa(href="http://www."+network+".com/"+url,target="_blank",title="meet us on "+network)
-								i(class="fa-"+network)
+								i.fa(class="fa-"+network)
 								span=network
 				default
 					p
